@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-import './styles.css'
-import r2 from '../../assets/200px/2r.png'
+import Header from '../components/Header'
+
 export default function Weather() {
   const [clima, setClima] = useState([])
 
@@ -20,6 +20,7 @@ export default function Weather() {
 
   return (
     <>
+      <Header />
       <div className='container'>
         {clima.map(info => (
           <div className='box'>
